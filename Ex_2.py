@@ -14,6 +14,7 @@ class Ship:
 
         self.x = float(self.rect.x)
 
+
 class BG:
     def run_game():
         pygame.init()
