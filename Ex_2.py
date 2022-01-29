@@ -7,7 +7,7 @@ class Person:
         self.screen_rect = ai_game.screen.get_rect()
         self.settings = ai_game.settings
 
-        self.image = pygame.image.load('images/ppp.bmp')
+        self.image = pygame.image.load('images/khj.bmp')
         self.rect = self.image.get_rect()
 
         self.rect.midbottom = self.screen_rect.midbottom
