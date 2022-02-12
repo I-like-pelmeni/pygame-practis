@@ -1,29 +1,27 @@
-import sys
 import pygame
+import sys
+from pygame.locals import *
 
-class Person:
-    def __init__(self):
+pygame.init()
 
-        self.image = pygame.image.load('images/khj.png')
-        self.rect = self.image.get_rect()
+color1 = (44, 31, 39)
+color2 = (230, 0, 0)
 
-        self.x = float(self.rect.x)
-        self.rect.x = self.x
+size = width, height = 600, 600
+screen = pygame.display.set_mode(size)
 
-    def blitme(self):
-        self.screen.blit(self.image, self.rect)
+clock = pygame.time.Clock()
 
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
 
-class BG:
-    def run_game():
-        pygame.init()
-        screen = pygame.display.set_mode((800,600))
-        bg_color = (0,0,230)
-        while True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    sys.exit()
-            screen.fill(bg_color)
-            pygame.display.flip()
-    run_game()
+    screen.fill(color1)
+    
+    pygame.draw.rect(screen, color2, (210, 210, 200, 200), 100)
 
+    pygame.display.flip()
+
+    clock.tick(10)
